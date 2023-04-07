@@ -2,7 +2,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Inter';
+	font-family: 'Inter', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 }
 
@@ -83,6 +84,8 @@ p {
 	line-height: 15px;
 	/* identical to box height */
 
+	padding-top: 2rem;
+
 	text-align: right;
 
 	/* light text */
@@ -162,8 +165,6 @@ footer p {
 	color: #E4E5EA;
 }
 
-.footer-menu .columns {}
-
 .main .columns {
 	padding-top: 2rem;
 	padding-bottom: 2.5rem;
@@ -184,8 +185,6 @@ footer p {
 	margin-left: auto;
 	margin-right: 0;
 }
-
-.main .right {}
 
 .footer-contacts .right {
 	display: flex;
@@ -213,6 +212,7 @@ footer p {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
+	padding-top: 1rem;
 
 	/* light text */
 
@@ -392,27 +392,29 @@ footer p {
 	display: display;
 }
 
-@media (max-width : 320px) {
+.columns .right .visibledevice {
+	display: grid;
+}
+
+@media only screen and (max-width: 320px) {
 	.visibledevice {
-		display: block;
+		display: grid;
 	}
 
 	.visibledesktop {
 		display: none;
 	}
-}
-
-.visibledevice header {
-	padding: 0;
-}
-
-@media only screen and (max-width: 320px) {
 
 	/* For mobile phones: */
 	header,
 	.main,
+	body,
 	footer {
 		width: 100%;
+	}
+
+	.header-menu .visibledevice {
+		display: flex;
 	}
 
 	body {
@@ -420,17 +422,278 @@ footer p {
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 0;
+		    max-width: 100%;
+    overflow-x: hidden;
 	}
 
-	.logo {
-		display: none;
+	header {
+		background-color: #0E1014;
+		height: 4rem;
+		grid-template-columns: auto;
 	}
 
-	.header-contacts {
-		display: none;
+	.header {
+		text-align: left;
+	}
+
+	.main {
+		padding-top: 2rem;
+		padding-bottom:1rem;
+		display: flex;
+		flex-direction: column;
+		padding-left: 1rem;
+		padding-right: 0rem;
+	}
+
+	footer {
+		padding-top: 3rem;
+		padding-left: 1rem;
+		padding-right: 0rem;
+		background-color: black
+	}
+
+	.main .right .header {
+		text-align: left;
+		padding-bottom: 0;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 16px;
+		/* identical to box height */
+		padding-left: 0.5rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+
+		/* light text */
+
+		color: #E4E5EA;
+	}
+
+	.main .right .label {
+		text-align: left;
+	}
+
+	.main .columns .visibledevice {
+		display: grid;
+
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 16px;
+		/* identical to box height */
+
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	.right {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	.free-consulting {
+		padding-top: 1rem;
+		text-align: left;
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
 	}
 	
-	header{
-		background-color:black;
+	.free-consulting .visibledevice{
+		display:block;
 	}
+
+	.footer-contacts .right {
+		align-items: flex-start;
+	}
+
+	.horizontal-align-2 {
+		justify-items: start;
+	}
+
+	.earn-more-text {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 44px;
+
+		/* light text */
+
+		color: #E4E5EA;
+	}
+
+	.with-wilbex-text {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 900;
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	footer {
+		grid-template-columns: auto;
+		grid-gap: 1rem;
+	}
+
+	.under-footer {
+		padding-left: 1rem;
+		padding-bottom: 2rem;
+				background-color: black;
+	}
+
+	.line {
+		border: 1px;
+		width: 10px;
+		height: 2px;
+		left: 0px;
+		top: 8px;
+
+		background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.main .columns {
+		grid-gap: 0.5rem 0rem;
+		justify-items: stretch;
+		justify-content: start;
+	}
+
+	.horizontal-row {
+		display: flex;
+		align-items: center;
+	}
+
+	.gap {
+		padding-left: 0.5rem;
+	}
+	
+		.free-consulting.visibledevice {
+		display:block;
+	}
+	
+	.main .right{
+		padding-top:1.5rem;
+	}
+	
+	.red-light{
+	position: absolute;
+width: 211px;
+height: 210px;
+left: -55px;
+top: 241px;
+z-index:-1;
+
+background: #961A1A;
+opacity: 0.5;
+filter: blur(196px);
+	}
+	.purple-light {
+	/* purple light */
+
+z-index:-1;
+
+position: absolute;
+width: 259px;
+height: 259px;
+left: 258px;
+top: 107px;
+
+background: #833AB4;
+opacity: 0.5;
+filter: blur(196px);
+	}
+	
+	.yellow-light{
+	position: absolute;
+width: 200px;
+height: 200px;
+left: -66px;
+top: 519px;
+z-index:-1;
+
+
+background: #FCB045;
+opacity: 0.4;
+filter: blur(196px);
+	}
+	
+	.glass-background {
+	position: absolute;
+width: 100%;
+height: 445px;
+left: 0px;
+top: 4rem;
+z-index:-1;
+
+background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+backdrop-filter: blur(7.5px);
+	}
+	
+	.noise {
+	position: absolute;
+width: 100%;
+height: 445px;
+left: 0px;
+top: 4rem;
+z-index:-1;
+mix-blend-mode: overlay;
+	}
+	
+	.red-ball-1{
+position: absolute;
+width: 43px;
+height: 43px;
+left: 29px;
+top: calc(402px + 4rem);
+
+background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+z-index:-2;
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+	}
+	
+	.purple-ball {
+position: absolute;
+width: 40px;
+height: 40px;
+left: 296px;
+top: calc(236px + 4rem);
+
+background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+filter: blur(5px);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+	}
+	
+	
+	header p{
+		font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+/* light text */
+
+color: #E4E5EA;
+	}
+	
+	.footer-menu .columns {
+	grid-gap: 2rem;
+}
+
 }
